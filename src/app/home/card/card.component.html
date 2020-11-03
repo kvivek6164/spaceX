@@ -1,0 +1,13 @@
+<div class="card">
+  <img src={{spaceXDetail.links.mission_patch}} class="card-img-top m-3" alt="spaceX Images">
+  <div class="card-body">
+    <h5 class="card-title">{{spaceXDetail.mission_name}} #{{spaceXDetail.flight_number}}</h5>
+    <p class="card-text">Mission Ids:</p>
+    <ul>
+      <li *ngFor="let id of spaceXDetail.mission_id">{{id}}</li>
+    </ul>
+    <p class="card-text">Launch year: {{spaceXDetail.launch_year}}</p>
+    <p class="card-text">Successful Launch: {{spaceXDetail.launch_success}}</p>
+    <div class="card-text">Successful Landing: {{spaceXDetail.launch_landing}}</div>
+  </div>
+</div>

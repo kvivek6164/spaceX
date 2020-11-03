@@ -1,0 +1,34 @@
+<h2>Filters</h2>
+<h3>Launch Year</h3>
+<div class="row">
+  <div class="col-sm-6 col-6 my-1" *ngFor="let ele of yearList">
+    <button class="btn btn-success" [ngClass]="ele.selected?'active':''"
+      (click)="onSelectedYear(ele.year)">{{ele.year}}</button>
+  </div>
+</div>
+<h3>Successful Launch</h3>
+<div class="row" role="group" aria-label="Basic radio toggle button group">
+  <div class="col-sm-6 col-6">
+    <input type="radio" class="btn-check" name="launch" id="launch1" [ngClass]="launch_pass?'active':''" autocomplete="off" value="true" (change)="onLaunchChange($event.target.value)">
+    <label class="btn btn-success" for="launch1">True</label>
+  </div>
+
+  <div class="col-sm-6 col-6">
+    <input type="radio" class="btn-check" name="launch" id="launch2" autocomplete="off" [ngClass]="!launch_pass?'active':''" value="false" (change)="onLaunchChange($event.target.value)">
+    <label class="btn btn-success" for="launch2">False</label>
+  </div>
+</div>
+<h3>Successful Landing</h3>
+<div class="row" role="group" aria-label="Basic radio toggle button group">
+  <div class="col-sm-6 col-6">
+    <input type="radio" class="btn-check" name="landing" id="land1" autocomplete="off" value="true"
+      (change)="onLandChange($event.target.value)" [ngClass]="land_pass?'active':''">
+    <label class="btn btn-success" for="land1">True</label>
+  </div>
+
+  <div class="col-sm-6 col-6">
+    <input type="radio" class="btn-check" name="landing" id="land2" autocomplete="off" value="false"
+      (change)="onLandChange($event.target.value)" [ngClass]="!land_pass?'active':''">
+    <label class="btn btn-success" for="land2">False</label>
+  </div>
+</div>

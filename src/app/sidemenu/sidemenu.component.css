@@ -1,0 +1,7 @@
+.btn-success, .btn-check{
+  background-color: #c6df9c;
+  color: #222;
+}
+.btn-success.active,.btn-check.active{
+  background-color: #7db901;
+}
